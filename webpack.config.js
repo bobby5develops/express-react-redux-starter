@@ -1,18 +1,18 @@
-var Path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var Webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const Path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-var isProduction = process.env.NODE_ENV === 'production';
-var cssOutputPath = isProduction ? '/styles/app.[hash].css' : '/styles/app.css';
-var jsOutputPath = isProduction ? '/scripts/app.[hash].js' : '/scripts/app.js';
-var ExtractSASS = new ExtractTextPlugin(cssOutputPath);
-var port = isProduction ? process.env.PORT || 8080 : process.env.PORT || 3000;
+const isProduction = process.env.NODE_ENV === 'production';
+const cssOutputPath = isProduction ? '/styles/app.[hash].css' : '/styles/app.css';
+const jsOutputPath = isProduction ? '/scripts/app.[hash].js' : '/scripts/app.js';
+const ExtractSASS = new ExtractTextPlugin(cssOutputPath);
+const port = isProduction ? process.env.PORT || 8080 : process.env.PORT || 3000;
 
 // ------------------------------------------
 // Base
 // ------------------------------------------
-var webpackConfig = {
+const webpackConfig = {
   resolve: {
     extensions: ['', '.js', '.jsx'],
   },
