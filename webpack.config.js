@@ -27,11 +27,10 @@ const webpackConfig = {
     }),
   ],
   module: {
-    loaders: [{
-      test: /.jsx?$/,
-      include: Path.join(__dirname, './src/app'),
-      loader: 'babel',
-    }],
+    loaders: [
+            { test: /.jsx?$/, include: Path.join(__dirname, './src/app'), loader: 'babel' },
+            { test: /\.(png|jpg|gif)$/, loader: 'url-loader' },
+    ],
   },
 };
 

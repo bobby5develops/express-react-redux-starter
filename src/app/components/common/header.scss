@@ -4,28 +4,6 @@ header {
   border-bottom: 1px solid $light-gray;
   margin-bottom: 40px;
 
-  /*nav {
-
-    ul {
-      text-align: center;
-
-      li {
-        display: inline;
-        margin-right: 60px;
-
-        a {
-          color: #333;
-          text-decoration: none;
-
-          &:hover {
-            color: $light-blue;
-            text-decoration: underline;
-          }
-        }
-      }
-    }
-  }*/
-
   nav {
     width: 100%;
     font-family: Raleway, sans-serif;
@@ -119,9 +97,7 @@ header {
     background: #ffffff; }
   nav.small-screen #menu-button.menu-opened:before {
     background: #1e3262; }
-  nav#menu {
-    display: none; }
-  nav#menu.show-nav {
+  div#menu.show-nav {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -139,7 +115,7 @@ header {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1e3262), color-stop(100%, #142344));
     background: -webkit-linear-gradient(top, #1e3262 0%, #142344 100%);
     background: linear-gradient(to bottom, #1e3262 0%, #142344 100%); }
-  nav#menu ul {
+  div#menu ul {
     list-style: none;
     background-color: rgba(30, 50, 98, 0.3);
     -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=33, Direction=0, Color=#2E2E2E)";
@@ -150,12 +126,12 @@ header {
     /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
     filter: progid:DXImageTransform.Microsoft.Shadow(Strength=33, Direction=135, Color=#2E2E2E);
     /*IE 5.5-7*/ }
-  nav#menu ul.mobile-nav ul.sub-menu {
+  div#menu ul.mobile-nav ul.sub-menu {
     text-transform: uppercase; }
-  nav#menu ul.mobile-nav li {
+  div#menu ul.mobile-nav li {
     width: 100%;
     border-top: 1px solid #1f3460; }
-  nav#menu ul.mobile-nav li a {
+  div#menu ul.mobile-nav li a {
     display: block;
     color: #FFFFFF;
     border-top: 1px solid #4F7389;
@@ -167,12 +143,12 @@ header {
     color: #FFFFFF;
     text-transform: uppercase;
     letter-spacing: 1px; }
-  nav#menu ul.mobile-nav li a:before {
+  div#menu ul.mobile-nav li a:before {
     padding: 20px 20px; }
-  nav#menu ul.mobile-nav li a:hover {
+  div#menu ul.mobile-nav li a:hover {
     background: #4F7389;
     color: #FFFFFF; }
-  nav#menu ul.mobile-nav li a i {
+  div#menu ul.mobile-nav li a i {
     padding-right: 5px; }
   nav ul.off-canvas {
     display: none; }
@@ -212,11 +188,12 @@ header {
     position: absolute;
     top: 100%;
     left: 0;
+    font-size: 11px;
     z-index: -1;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    padding: 40px 28px;
+    padding: 10px 8px;
     color: #FFFFFF;
     background: #bf9941;
     content: attr(data-title);
@@ -227,4 +204,7 @@ header {
     -webkit-transform-origin: 50% 0;
     transform-origin: 50% 0;
     -ms-transform: translateY(18px); }
+  nav ul li a img {
+    padding: 10px;
+  }
 }
