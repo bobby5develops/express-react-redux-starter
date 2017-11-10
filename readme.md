@@ -3,7 +3,7 @@
 
 # The Robert Yarborough Studios /
 
-## Features
+## Stack - Features
 
 - Webpack development and production environment configuration
 - Webpack SCSS configuration
@@ -12,6 +12,8 @@
 - React, Redux configuration
 - Testing environment configured with Mocha and Chai
 - Linting with Airbnb eslint configuration
+
+## Content
 
 ## Getting Started
 

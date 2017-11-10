@@ -22,7 +22,7 @@ ReactDOM.render(
   <Provider store={store}>
     <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}>
       <Route path="/" component={App}>
-        <IndexRoute component={Home} />;
+        <IndexRoute component={Home} />
         <Route path="/bio" component={Bio} />
 		<Route path="/projects" component={Projects} />
 		<Route path="/contact" component={Contact} />
