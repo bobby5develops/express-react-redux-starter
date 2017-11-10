@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/DimitriMikadze/express-react-redux-starter.svg?branch=master)](https://travis-ci.org/DimitriMikadze/express-react-redux-starter)
 [![dependencies Status](https://david-dm.org/DimitriMikadze/express-react-redux-starter/status.svg)](https://david-dm.org/DimitriMikadze/express-react-redux-starter)
 
-# The Robert Yarborough Studios /
+# The Robert Yarborough Creative Studios
 
 ## Stack - Features
 

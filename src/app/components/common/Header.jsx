@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import HiddenMenu from './HiddenMenu';
 
 class Header extends React.Component {
 	constructor (props) {
@@ -18,31 +19,25 @@ class Header extends React.Component {
 	render() {
 	       return (
 
-              <header>
+              <header className="header">
+				  {!this.state.isHidden && <HiddenMenu />}
                    <nav className="nav toggle-nav" role="navigation">
                       <ul className="section group">
-                  <li className="span_1_of_12 active">
-                    <Link to="/" onClick={this.toggleHidden.bind(this)} data-title="Welcome to the Robert Yarborough Studio" aria-hidden="true">
+                  		<li className="span_1_of_12 active">
+                    <Link to="/" onClick={this.toggleHidden.bind(this)} data-title="Lightning-Fast Apps" aria-hidden="true">
                       <img src={require("./images/logo.png")} role="presentation" />
                     </Link>
                   </li>
-                  {/* <li>
-                    <Link to="/about" data-title="Learn About Me" aria-hidden="true">About</Link>
-                    </li> */}
-                </ul>
+					  </ul>
                    </nav>
-                  {console.log(!this.state.isHidden && <Hiddenmenu />)}
-                {!this.state.isHidden && <Hiddenmenu />}
-
               </header>
-
            );
     }
 }
-const Hiddenmenu = () => {
+
+{/*const Hiddenmenu = () => {
 	return (
-		<div id="menu">
-			<p>hello</p>
+		<div id="menu" className="show-nav">
 			<ul className="mobile-nav">
 				<li className="menu-item menu-item-has-children">
 					<Link to="/" data-title="Learn About Me."><i className="fa fa-book" aria-hidden="true"></i>Home</Link>
@@ -59,8 +54,6 @@ const Hiddenmenu = () => {
 			</ul>
 		</div>
 	);
-};
-
-
+};*/}
 
 export default Header;

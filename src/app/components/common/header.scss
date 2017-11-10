@@ -71,7 +71,7 @@ header {
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 1px;
-    background: #1e3262; }
+    background: #000000; }
   nav.small-screen #menu-button:after {
     content: "";
     position: absolute;
@@ -96,7 +96,7 @@ header {
     height: 2px;
     background: #ffffff; }
   nav.small-screen #menu-button.menu-opened:before {
-    background: #1e3262; }
+    background: #000000; }
   div#menu.show-nav {
     position: fixed;
     top: 0;
@@ -110,11 +110,7 @@ header {
     /*FF 3.5+*/
     /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
     box-shadow: 0 0 33px -14px #2E2E2E inset;
-    /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
-    background-color: #142344;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1e3262), color-stop(100%, #142344));
-    background: -webkit-linear-gradient(top, #1e3262 0%, #142344 100%);
-    background: linear-gradient(to bottom, #1e3262 0%, #142344 100%); }
+    }
   div#menu ul {
     list-style: none;
     background-color: rgba(30, 50, 98, 0.3);
@@ -146,7 +142,7 @@ header {
   div#menu ul.mobile-nav li a:before {
     padding: 20px 20px; }
   div#menu ul.mobile-nav li a:hover {
-    background: #4F7389;
+    background: #000000;
     color: #FFFFFF; }
   div#menu ul.mobile-nav li a i {
     padding-right: 5px; }
@@ -154,7 +150,7 @@ header {
     display: none; }
   nav ul {
     list-style: none;
-    background: #1e3262; }
+    background: #000000; }
   nav ul li {
     display: inline-block;
     float: left;
@@ -177,7 +173,7 @@ header {
     letter-spacing: 1px;
     text-transform: uppercase;
     text-decoration: none;
-    background: #1e3262;
+    background: #000000;
     -webkit-transition: all .3s;
     transition: all .3s;
     -webkit-transform-origin: 50% 0;
@@ -188,7 +184,7 @@ header {
     position: absolute;
     top: 100%;
     left: 0;
-    font-size: 11px;
+    font-size: 7px;
     z-index: -1;
     box-sizing: border-box;
     width: 100%;
