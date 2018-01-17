@@ -12,7 +12,6 @@ class Hero extends React.Component {
 		this.handleClick = this.handleClick.bind(this);
 	}
 
-
 	handleClick() {
 		this.setState(prevState => ({
 			didScroll: !prevState.didScroll,
@@ -25,7 +24,6 @@ class Hero extends React.Component {
 			);
 	};
 
-
 	componentDidUpdate() {
 		console.log('hero did mount', this.state.didScroll);
 	}
@@ -33,6 +31,7 @@ class Hero extends React.Component {
 	render() {
 		return (
 			<div className="section group hero">
+				<video src={require('./../common/videos/video_preview_h264.mp4')} role="presentation"/>,
 				<section className="col span_12_of_12">
 					<button className="hero_btn" onClick={this.handleClick}>
 						{this.state.didScroll ? 'YES' : 'NO'}

@@ -3,16 +3,17 @@
   height: 800px;
   padding: 0;
   margin-bottom: 40px;
-  background:  url(http://upload.wikimedia.org/wikipedia/commons/d/dd/Muybridge_race_horse_animated.gif) no-repeat center center fixed;
+  //background:  url(http://upload.wikimedia.org/wikipedia/commons/d/dd/Muybridge_race_horse_animated.gif) no-repeat center center fixed;
+  background: url("./../common/videos/video_preview_h264.mp4") no-repeat center center fixed;
   background-size: cover;
   background-position: 50% 0px;
   background-attachment: fixed;
   section {
+    text-align: center;
     button {
       margin-right:auto;
       margin-left:auto;
-      margin-top: 60%;
-      width:100%;
+      margin: 0px;
     }
     h1{
      text-align: center;

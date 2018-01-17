@@ -24,8 +24,8 @@ class Header extends React.Component {
                    <nav className="nav toggle-nav" role="navigation">
                       <ul className="section group">
                   		<li className="span_1_of_12 active">
-                    <Link to="/" onClick={this.toggleHidden.bind(this)} data-title="Lightning-Fast Apps" aria-hidden="true">
-                      <img src={require("./images/logo.png")} role="presentation" />
+                    <Link to="/" onClick={this.toggleHidden.bind(this)} data-title="Yarborough Mobile & Web Apps" aria-hidden="true">
+                      <img src={require('./images/logo.png')} role="presentation" />
                     </Link>
                   </li>
 					  </ul>
