@@ -1,12 +1,12 @@
 import React from 'react';
-import scroll from './../common/yarboroughScroll';
+import scroll from '../common/base/yarboroughScroll';
 import './hero.scss';
 
 class Hero extends React.Component {
 	constructor (props) {
 		super(props);
 		this.state = {
-			didScroll: true
+			didScroll: true,
 		};
 
 		this.handleClick = this.handleClick.bind(this);
@@ -18,9 +18,11 @@ class Hero extends React.Component {
 		}));
 			scroll(
 				document.querySelector('.header'),
-				300,
-				'easeOutQuad',
-				() => console.log(`Just finished scrolling to ${window.pageYOffset}px`)
+				500,
+				'easeInQuart',
+				() => {
+					console.log('yo');
+				}
 			);
 	};
 
@@ -31,13 +33,12 @@ class Hero extends React.Component {
 	render() {
 		return (
 			<div className="section group hero">
-				<video src={require('./../common/videos/video_preview_h264.mp4')} role="presentation"/>,
-				<section className="col span_12_of_12">
 					<button className="hero_btn" onClick={this.handleClick}>
-						{this.state.didScroll ? 'YES' : 'NO'}
-						<h1>HERO</h1>
+						<h1>Need to build a feature for your Mobile App?</h1>
+						<h2>Choose One</h2>
+						<span>{this.state.didScroll ? 'YES' : 'NO'}</span>
 					</button>
-				</section>
+				{/*<video src={require('./../common/videos/video_preview_h264.mp4')} loop={true} autoPlay={true} width="100%" height="auto"/>*/}
 			</div>);
 	}
 }

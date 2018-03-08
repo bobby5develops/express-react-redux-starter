@@ -2,6 +2,7 @@
 import { renderComponent, expect } from '../test_helper';
 import App from '../../src/app/components/App';
 
+
 describe('App', () => {
   let component;
 

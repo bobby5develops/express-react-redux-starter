@@ -2,7 +2,7 @@ import React from 'react';
 
 function Home() {
   return (
-    <div className="section group home">
+    <div id="main_content" className="section group home">
         <section className="col span_4_of_12">
             <h1>First Column</h1>
         </section>

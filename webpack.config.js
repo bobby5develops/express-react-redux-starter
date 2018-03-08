@@ -29,7 +29,7 @@ const webpackConfig = {
   module: {
     loaders: [
             { test: /.jsx?$/, include: Path.join(__dirname, './src/app'), loader: 'babel' },
-            { test: /\.(png|jpg|gif|mp4)$/, loader: 'url-loader' },
+            { test: /\.(png|jpg|gif|mp4|mp3)$/, loader: 'url-loader' },
     ],
   },
 };

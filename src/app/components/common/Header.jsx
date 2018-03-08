@@ -3,37 +3,47 @@ import { Link } from 'react-router';
 import HiddenMenu from './HiddenMenu';
 
 class Header extends React.Component {
-	constructor (props) {
-		super(props);
-		this.state = {
+	 constructor (props) {
+        super(props);
+        this.state = {
 			isHidden: true,
 		};
+
+        this.toggleHidden = this.toggleHidden.bind(this);
 	}
 
-	toggleHidden () {
+     toggleHidden (event) {
+		 event.preventDefault();
+		 /*document.getElementById('menu').style.width = '250px';*/
+		 /*document.getElementById('main_content').style.marginLeft = '250px';
+		 document.body.style.backgroundColor = 'rgba(0,0,0,0.4)';*/
 		this.setState({
 			isHidden: !this.state.isHidden,
 		});
+		 console.log(document.querySelector('#menu'))
 	}
 
-	render() {
+     render() {
 	       return (
-
               <header className="header">
 				  {!this.state.isHidden && <HiddenMenu />}
                    <nav className="nav toggle-nav" role="navigation">
                       <ul className="section group">
                   		<li className="span_1_of_12 active">
-                    <Link to="/" onClick={this.toggleHidden.bind(this)} data-title="Yarborough Mobile & Web Apps" aria-hidden="true">
-                      <img src={require('./images/logo.png')} role="presentation" />
-                    </Link>
-                  </li>
+                    		<Link to="/" onClick={this.toggleHidden} data-title="Yarborough Mobile & Web Apps" aria-hidden="true">
+                      			<img src={require('./images/logo.png')} role="presentation" />
+                    		</Link>
+                  		</li>
 					  </ul>
                    </nav>
               </header>
            );
     }
 }
+
+export default Header;
+
+
 
 {/*const Hiddenmenu = () => {
 	return (
@@ -56,4 +66,3 @@ class Header extends React.Component {
 	);
 };*/}
 
-export default Header;

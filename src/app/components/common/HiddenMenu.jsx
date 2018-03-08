@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 
-function HiddenMenu() {
+const HiddenMenu = () => {
 	return (
 		<div id="menu" className="show-nav">
 			<ul className="mobile-nav">
@@ -21,7 +21,7 @@ function HiddenMenu() {
 			</ul>
 		</div>
 	);
-}
+};
 
 
 export default HiddenMenu;
