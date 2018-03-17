@@ -39,9 +39,9 @@ header {
     visibility: hidden;
     line-height: 0;
     height: 0; }
-  nav #menu-button {
+  nav#menu-button {
     display: none; }
-  nav .show-nav {
+  nav.show-nav {
     -webkit-transform: translate(260px, 0px);
     transform: translate(260px, 0px); }
   nav.small-screen {
@@ -99,12 +99,15 @@ header {
     background: #000000; }
   div#menu.show-nav {
     position: fixed;
-    top: 800px;
+    top: 400px;
     bottom: 0;
-    width: 260px;
+    width: 250px;
     left: 0px;
     height: 100%;
     display: block;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.5s;
     -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=33, Direction=0, Color=#2E2E2E)";
     /*IE 8*/
     /*FF 3.5+*/

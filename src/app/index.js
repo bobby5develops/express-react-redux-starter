@@ -18,8 +18,8 @@ const store = createStoreWithMiddleware(reducers);
 const rootEntry = document.getElementById('react-root');
 
 ReactDOM.render(
-<Provider store={store}>
-	<Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}>
+	<Provider store={store}>
+		<Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}>
 		<Route path="/" component={App}>
         	<IndexRoute component={Home} />
         	<Route path="/bio" component={Bio} />
@@ -27,5 +27,5 @@ ReactDOM.render(
 			<Route path="/contact" component={Contact} />
       </Route>
     </Router>
-</Provider>
+	</Provider>
   , rootEntry);

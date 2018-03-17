@@ -21,7 +21,7 @@ class Hero extends React.Component {
 				500,
 				'easeInQuart',
 				() => {
-					console.log('yo');
+					console.log('scroll callback!!!');
 				}
 			);
 	};
