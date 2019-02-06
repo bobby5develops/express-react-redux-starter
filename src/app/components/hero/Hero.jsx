@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import scroll from '../common/base/yarboroughScroll';
 import './hero.scss';
 
@@ -6,38 +7,37 @@ class Hero extends React.Component {
 	constructor (props) {
 		super(props);
 		this.state = {
-			didScroll: true,
+			didScroll: false,
 		};
 
-		this.handleClick = this.handleClick.bind(this);
+		this.scrollFn = this.handleScroll.bind(this);
 	}
 
-	handleClick() {
-		this.setState(prevState => ({
-			didScroll: !prevState.didScroll,
-		}));
-			scroll(
-				document.querySelector('.header'),
-				500,
-				'easeInQuart',
-				() => {
-					console.log('scroll callback!!!');
-				}
-			);
+	componentDidMount(){
+		console.log('Hero component did mount', this);
+	}
+
+
+
+	handleScroll(event) {
+		event.preventDefault();
+		this.setState({
+			didScroll: true,
+		});
+		scroll(document.querySelector('#page-wrap'), 500, 'easeInQuart', () => {
+				console.log('scroll callback!!!', this);
+			}
+		);
 	};
-
-	componentDidUpdate() {
-		console.log('hero did mount', this.state.didScroll);
-	}
 
 	render() {
 		return (
 			<div className="section group hero">
-					<button className="hero_btn" onClick={this.handleClick}>
+					<Link className="hero_btn" onClick={this.scrollFn}>
 						<h1>Need to build a feature for your Mobile App?</h1>
 						<h2>Choose One</h2>
 						<span>{this.state.didScroll ? 'YES' : 'NO'}</span>
-					</button>
+					</Link>
 				{/*<video src={require('./../common/videos/video_preview_h264.mp4')} loop={true} autoPlay={true} width="100%" height="auto"/>*/}
 			</div>);
 	}
